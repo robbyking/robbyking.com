@@ -8,51 +8,72 @@
 	<body>
 		<section id="main-header">
 			<section id="main-header-content">
-				<a href="../"><img src="../images/logo.png" width="150" alt="robbyking" class="logo" /></a>
+				<a href="JavaScript:ToggleMobileNav();" id="menu-link">
+					<img src="../images/menu.png" alt="" align="left" width="64" id="menu-button">
+				</a>
+				<a href="JavaScript:ToggleMobileNav();" id="logo-link">
+					<img src="../images/logo.png" width="150" alt="robbyking" class="logo" />
+				</a>
 				<nav class="top-nav">
-					<img src="../icons/facebook-grey.png" alt="facebook"	width="15" height="15" class="nav-item"/>
-					<a href="http://www.facebook.com/robbykingsf" class="nav-item">fb.com/robbykingsf</a>
-					&nbsp;
-					<img src="../icons/twitter-grey.png" alt="facebook"	width="15" height="15" class="nav-item"/>
-					<a href="http://www.twitter.com/#!/robbyking" class="nav-item">twitter.com/#!/robbyking</a>
-					&nbsp;
-					<img src="../icons/tumblr-grey.png" alt="facebook"	width="15" height="15" class="nav-item"/>
+					<a href="http://www.facebook.com/robbykingsf" class="nav-item">fb.com/robbykingsf</a> |
+					<a href="http://www.twitter.com/#!/robbyking" class="nav-item">twitter.com/#!/robbyking</a> |
 					<a href="http://www.robbykingsf.tumblr.com" class="nav-item">robbykingsf.tumblr.com</a>
 				</nav>
 			</section>
 		</section>
 		<section id="main-content" class="centered">
-			<section id="mobile-nav">
-				<div class="mobile-nav-item">
-					<img src="icons/facebook-grey.png" alt="facebook"	width="60" height="60" />
-					<a href="http://www.facebook.com/robbykingsf" class="mobile-nav-item">fb.com/robbykingsf</a>
-				</div>
-				<div class="mobile-nav-item">
-					<img src="icons/twitter-grey.png" alt="facebook"	width="60" height="60" />
-					<a href="http://www.twitter.com/#!/robbyking" class="mobile-nav-item">twitter.com/#!/robbyking</a>
-				</div>
-				<div class="mobile-nav-item">
-					<img src="icons/tumblr-grey.png" alt="facebook"	width="60" height="60" />
-					<a href="http://www.robbykingsf.tumblr.com" class="mobile-nav-item">robbykingsf.tumblr.com</a>
-				</div>
-			</section>
+			<ul id="mobile-nav">
+				<li class="mobile-nav-item">
+					<a href="http://www.facebook.com/robbykingsf" class="mobile-nav-item"><img src="../images/fb.png" class="mobile-nav-icon" alt=""></a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="http://www.twitter.com/#!/robbyking" class="mobile-nav-item"><img src="../images/tw.png" class="mobile-nav-icon" alt=""></a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="http://www.robbykingsf.tumblr.com" class="mobile-nav-item"><img src="../images/tm.png" 	 class="mobile-nav-icon" alt=""></a>
+				</li>
+			</ul>
 			title, author or subject: <input type="text" id="search" /> <input type="button" id="submit" value="submit" class="button" />
 		</section>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#submit").click(function(){
+
+			var deviceType;
+			$("#submit").click(function(){
 					doSearch();
-				});
-				$("#search").keypress(function(key) {
-					if (key.which == 13)
-						doSearch();
-				});
+			});
+			$("#search").keypress(function(key) {
+				if (key.which == 13)
+					doSearch();
+			});
+
+			$(document).ready(function() {
+				SetDeviceType();
+				SetLogoClickEvent();
+
 			})
+			function SetDeviceType(){
+				if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+ 					deviceType = "mobile";
+ 				}else {
+ 					deviceType = "desktop";
+				}
+			}
+			function SetLogoClickEvent() {
+				if (deviceType == "desktop") {
+					$("#logo-link").click(function(){
+						return false;
+					});
+				}
+			}
+			function ToggleMobileNav(){
+				$("#mobile-nav").slideToggle();
+			}
 			function doSearch() {
 				var url = "https://www.google.com/#q=" + $("#search").val() + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mobi) -\"index-of-mp3\" -vmp3 -shexy -pickbrains -kaboodle -mp3gle -ihackr -indexofmp3 -blogspot -franceradio -insanbilimleri -\"english-4-free\" -audiozen -hyooge -\"game-freaks\"";
 				window.open(url);
 			}
 		</script>
+		<a href='https://alpha.app.net/robbyking' rel='me'>...</a>
 	</body>
 </html>
