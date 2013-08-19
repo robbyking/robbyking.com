@@ -1,6 +1,7 @@
-body{font-family:Calibri, "Myriad Pro", sans-serif;margin:0;background-color:#fff;color:#888;overflow-y:scroll;font-size:11pt;}
+body{font-family:Calibri, "Myriad Pro", sans-serif;margin:0;background-color:#fff;color:#444;overflow-y:scroll;font-size:11pt;}
 a, a:visited{text-decoration:none;color:#666;}
 a:hover{color:#999}
+h1{font-weight:400;font-size:2em;}
 img{border:0;}
 ::-webkit-scrollbar{width:10px;background: #dcdcdc;}
 ::-webkit-scrollbar-thumb{border-radius: 3px;width:10px;background:#bbbbbb;}
@@ -12,20 +13,23 @@ img{border:0;}
 .mobile-nav-icon{width:30px;height:auto;padding:10px}
 .mobile-nav-item{list-style-type:none;display:inline;padding:0;margin:0;}
 .nav-item{vertical-align:middle;margin:0 10px;}
+
+.spacer{height:20px;display:block;}
 .top-nav{border:solid 1px transparent;margin-top:18px;z-index:51;float:right;}
 
 #main-header{height:60px;margin-top:-60px;background-color:#fefefe;border-bottom:solid 1px #ccc;position:fixed;width:100%;z-index:99;box-shadow:0 -1px 4px;overflow:hidden;opacity:.9;}
 #main-header-content{margin:0 auto 0 auto;width:80%;max-width:980px;z-index:50;}
-#main-content{margin:60px auto 0 auto;z-index:2;text-align:left;min-width:280px;width:80%;max-width:980px;padding:60px 0;}
+#main-content{margin:60px auto 0 auto;z-index:2;text-align:left;min-width:280px;width:80%;max-width:980px;padding:20px 0;}
 #menu-button{display:none;}
 #mobile-nav{display:none;text-align:left;padding:0 !important;margin:0 0 0 40px !important;}
+#photo-container{padding-top:60px;}
 section{border:solid 1px #fff;}
 
 @media only screen and (max-device-width: 480px) {
 
   #main-header{height:300px !important; margin-top:0 !important;}
   #main-header-content{width:100%;max-width:100%;text-align:center;}
-  #main-content{z-index:2;text-align:left;max-width:100%;width:100%;margin-top:0 !important; padding-top:340px;}
+  #main-content{z-index:2;text-align:left;max-width:100%;width:100%;margin-top:0 !important; padding:340px 20px 0 20px !important;}
   #menu-button{display:block;margin:50px 0 0 20px !important;opacity:.7;}
   #mobile-nav{text-align:center;padding:0 !important;margin:0 0 40px 0 !important;}
 
