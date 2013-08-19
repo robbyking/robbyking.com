@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>robbyking</title>
+		<link rel="stylesheet" type="text/css" href="../css/responsive-style.css"/>
+		<link rel="shortcut icon" href="http://robbyking.com/icons/favicon.png"/>
+	</head>
+	<body>
+		<section id="main-header">
+			<nav id="main-header-links">&nbsp;</nav>
+			<section id="main-header-content"><a href="../"><img src="../images/logo.png" width="250" alt="robbyking" /></a></section>
+		</section>
+		<section id="main-content" class="centered">
+			title, author or subject: <input type="text" id="search" />
+			<select id="type">
+				<option>mobi</option>
+				<option>mp3</option>
+				<option>mp4</option>
+				<option>otf</option>
+				<option>pdf</option>
+				<option>ttf</option>
+			</select>
+			<input type="button" id="submit" value="submit" class="button" />
+		</section>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#submit").click(function(){
+					doSearch();
+				});
+				$("#search").keypress(function(key) {
+					if (key.which == 13)
+						doSearch();
+				});
+			})
+			function doSearch() {
+				var url = "https://www.google.com/#q=" + $("#search").val() + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (" + $("#type").val() + ") -\"index-of-mp3\" -vmp3 -shexy -pickbrains -kaboodle -mp3gle -ihackr -indexofmp3 -blogspot -franceradio -insanbilimleri -\"english-4-free\" -audiozen -hyooge -\"game-freaks\"";
+				window.open(url);
+			}
+		</script>
+	</body>
+</html>
