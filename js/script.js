@@ -8,6 +8,11 @@
   $(window).bind('scroll',function(e){
     parallaxScroll();
   });
+  function loadInstagramPhotos(){
+    $('#slideshow').embedagram({
+      instagram_id: 30809912
+    });
+  }
   function setDeviceType(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
        isDesktop = false;
@@ -19,23 +24,6 @@
       $('#header').css("position", "fixed");
       $('#header').css('top',-(scrolled*0.1)+'px');
     }
-  }
-  function loadInstagramPhotos(){
-    $('#slideshow').embedagram({
-      instagram_id: 30809912
-    });
-  }
-  function writeLog() {
-    console.log(
-      "Hello! \n\n" +
-      "While I'm not actively looking for a job, if something were to come up in a field related\n" +
-      "to environmentalism, conservation or clean energy I would definitely be interested in\n" +
-      "learning more.\n\n" +
-      "Feel free to email me at robbyking@gmail.com, or check out my profile at linkedin.com/in/robbyking/.\n\n" +
-      "Thanks!\n\n" +
-      "_\n" +
-      "robbyking\n"
-    );
   }
   (function($){
     $.fn.extend({
@@ -69,3 +57,16 @@
       }
     });
   })(jQuery);
+
+  function writeLog() {
+    console.log(
+      "Hello! \n\n" +
+      "While I'm not actively looking for a job, if something were to come up in a field related\n" +
+      "to environmentalism, conservation or clean energy I would definitely be interested in\n" +
+      "learning more.\n\n" +
+      "Feel free to email me at robbyking@gmail.com, or check out my profile at linkedin.com/in/robbyking/.\n\n" +
+      "Thanks!\n\n" +
+      "_\n" +
+      "robbyking\n"
+    );
+  }
