@@ -1,1 +1,141 @@
-html{height:100%}body{font-family:'Open Sans',sans-serif;margin:0;padding:0;width:100%;height:100%;font-weight:200;font-size:12pt;color:#484848;background-color:#eee;overflow-y:scroll;overflow-x:auto;}a,a:visited{text-decoration:none;color:#666}a:hover{color:#999}h1{font-size:2em}h1,h2,h3,h4,h5{font-weight:200;margin:0 0 5px;padding-bottom:0}img{border:0}main{display:block}p{line-height:1.3em}ul{list-style-position:inside!important}ul>li{line-height:1.3em;margin-bottom:10px}#content{position:relative;margin:0 auto!important;width:100%;padding-top:20px;background-color:#eee;z-index:4}#content-footer{position:relative;z-index:4}#header{position:absolute;margin-top:30px;background-color:transparent;width:100%;text-align:center;z-index:3}#hero-image{width:100%;max-height:85%;z-index:2;position:relative;display:block}#hero-image-container{background-color:#000000;height:80%;max-height:600px}#hero-image{background-color:#333;color:#333;overflow:hidden;z-index:2;position:relative;background:url(../img/ballerina.jpg);height:100%;min-height:250px;max-height:600px;background-size:cover;background-position:bottom center;opacity:0.3;filter:alpha(opacity=30);}.nav-item{font-family:Cambria, Georgia;color:#fff!important;font-weight:100;margin:0 20px;font-size:16pt;padding:0 10px;}.top-nav{border:solid 1px transparent;margin-top:18px;display:block}@media screen and (max-width:680px){#hero-image-container{max-height:275px!important}#hero-image{max-height:250px!important}}
+html {
+    height: 100%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+    font-size: 12pt;
+    color: #484848;
+    background-color: #000;
+    overflow-y: scroll;
+    overflow-x: auto
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #666
+}
+
+a:hover {
+    color: #999
+}
+
+h1 {
+    font-size: 2em
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 200;
+    margin: 0 0 5px;
+    padding-bottom: 0
+}
+
+img {
+    border: 0
+}
+
+main {
+    display: block
+}
+
+p {
+    line-height: 1.3em
+}
+
+ul {
+    list-style-position: inside!important
+}
+
+ul>li {
+    line-height: 1.3em;
+    margin-bottom: 10px
+}
+
+#content {
+    position: relative;
+    margin: 0 auto!important;
+    width: 100%;
+    padding-top: 20px;
+    background-color: #eee;
+    z-index: 4
+}
+
+#content-footer {
+    position: relative;
+    z-index: 4
+}
+
+#header {
+    position: absolute;
+    margin-top: 30px;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    z-index: 3
+}
+
+#hero-image {
+    width: 100%;
+    max-height: 85%;
+    z-index: 2;
+    position: relative;
+    display: block
+}
+
+#hero-image-container {
+    background-color: #000;
+    height: 100%;
+    min-height: 100%;
+}
+
+#hero-image {
+    background-color: #333;
+    color: #333;
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    background: url(../img/ballerina.jpg);
+    height: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    opacity: .3;
+    filter: alpha(opacity=30)
+}
+
+.nav-item {
+    font-family: Cambria, Georgia;
+    color: #fff!important;
+    font-weight: 100;
+    margin: 0 20px;
+    font-size: 16pt;
+    padding: 0 10px
+}
+
+.top-nav {
+    border: solid 1px transparent;
+    margin-top: 18px;
+    display: block
+}
+
+@media screen and (max-width: 680px) {
+    #hero-image-container {
+        max-height: 260px!important
+    }
+    #hero-image {
+        max-height: 260px!important
+    }
+    .top-nav {
+        display: none
+    }
+}
